@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5f9;
+}
+
+header {
+    background-color: #1a3263;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    max-width: 150px; /* Adjust the maximum width as needed */
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+nav {
+    background-color: #1d3b73;
+    padding: 10px;
+    text-align: center;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+nav a {
+    color: #f0f5f9;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.content {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    color: #1a3263;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-in-out forwards, slideIn 1s ease-in-out forwards;
+}
+
+footer {
+    background-color: #1a3263;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
